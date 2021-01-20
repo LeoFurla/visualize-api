@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <h2>Cryptocoins</h2>
+  </div>
+  <div class="row">
+    <ul class="item-list">
+      <li *ngFor="let item of crypto">
+        <a
+          [routerLink]="['/cryptocoins/', item.id]"
+          routerLinkActive="router-link-active"
+        >
+          {{ item.attributes.name }} ( {{ item.attributes.symbol }} )</a
+        >
+
+        Price: {{ item.attributes.avg_price }} €
+      </li>
+    </ul>
+  </div>
+</div>
